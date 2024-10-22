@@ -4,7 +4,7 @@ if [ ! -d ~/.config/vimd ]; then
     mkdir -p ~/.config/vimd
 fi
 
-git clone github.com:cyrnicolase/vimrc.git ~/.config/vimd
+git clone https://github.com/cyrnicolase/vimrc.git ~/.config/vimd
 if [ -f ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc.bak
 fi
