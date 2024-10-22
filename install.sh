@@ -4,13 +4,18 @@ if [ ! -d ~/.config/vimd ]; then
     mkdir -p ~/.config/vimd
 fi
 
-git clone https://github.com/cyrnicolase/vimrc.git ~/.config/vimd
+git clone https://github.com/cyrnicolase/vimrc.git ~/.config/vim.d
+if [ $? != 0 ];then
+    echo "git clone fail!"
+    exit 1
+fi
+
 if [ -f ~/.vimrc ]; then
     mv ~/.vimrc ~/.vimrc.bak
 fi
-ln -s ~/.config/vimd/vimrc/.vimrc ~/.vimrc
+ln -s ~/.config/vim.d/vimrc/.vimrc ~/.vimrc
 
 if [ -d ~/.vim ]; then
     mv ~/.vim ~/.vim.bak
 fi
-ln -s ~/.config/vimd/vimrc/.vim ~/.vim
+ln -s ~/.config/vim.d/vimrc/.vim ~/.vim
