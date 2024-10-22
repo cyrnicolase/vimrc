@@ -4,6 +4,9 @@ if [ ! -d ~/.config/ ]; then
     mkdir -p ~/.config
 fi
 
+if [ -d ~/.config/vim.d ]; then
+    rm -rf ~/.config/vim.d
+fi
 
 git clone -q https://github.com/cyrnicolase/vimrc.git ~/.config/vim.d
 if [ $? != 0 ]; then
