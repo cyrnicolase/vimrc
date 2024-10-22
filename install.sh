@@ -4,7 +4,8 @@ if [ ! -d ~/.config/vimd ]; then
     mkdir -p ~/.config/vimd
 fi
 
-git clone https://github.com/cyrnicolase/vimrc.git ~/.config/vim.d
+
+git clone -q https://github.com/cyrnicolase/vimrc.git ~/.config/vim.d
 if [ $? != 0 ];then
     echo "git clone fail!"
     exit 1
@@ -19,3 +20,5 @@ if [ -d ~/.vim ]; then
     mv ~/.vim ~/.vim.bak
 fi
 ln -s ~/.config/vim.d/vimrc/.vim ~/.vim
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
