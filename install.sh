@@ -1,12 +1,12 @@
 #!/bin/bash
 
-if [ ! -d ~/.config/vimd ]; then
-    mkdir -p ~/.config/vimd
+if [ ! -d ~/.config/ ]; then
+    mkdir -p ~/.config
 fi
 
 
 git clone -q https://github.com/cyrnicolase/vimrc.git ~/.config/vim.d
-if [ $? != 0 ];then
+if [ $? != 0 ]; then
     echo "git clone fail!"
     exit 1
 fi
