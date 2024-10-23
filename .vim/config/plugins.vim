@@ -28,7 +28,8 @@ let g:NERDTreeDirArrowCollapsible = "~"
 let g:NERDTreeCascadeOpenSingleChildDir = 1
 let g:NERDTreeAutoCenterThreshold = 1
 let g:NERDTreeShowHidden = 0
-let g:NERDTreeIgnore = ['node_modules', "\.pyc$"]
+let g:NERDTreeShowHidden = 1
+let g:NERDTreeIgnore = ['node_modules', "\.pyc$", ".git"]
 map <F2> :NERDTreeToggle<CR>
 
 

@@ -37,6 +37,7 @@ set ignorecase
 set cursorline
 set nobackup
 set nocompatible
+set noswapfile
 
 set fileencoding=utf-8
 set encoding=utf-8

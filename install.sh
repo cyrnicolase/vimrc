@@ -5,7 +5,9 @@ if [ ! -d "$HOME/.config" ]; then
 fi
 
 if [ -d "$HOME/.config/vim.d" ]; then
-    rm -rf $HOME/.config/vim.d
+    cd $HOME/.config/vim.d && git pull
+    echo "Done!!"
+    exit 0
 fi
 
 git clone -q https://github.com/cyrnicolase/vimrc.git $HOME/.config/vim.d
