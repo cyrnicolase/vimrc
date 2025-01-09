@@ -16,6 +16,7 @@ Plug 'cyrnicolase/auto-pairs'
 Plug 'chr4/nginx.vim'
 Plug 'cespare/vim-toml', {'branch': 'main'}
 Plug 'godlygeek/tabular'
+Plug 'github/copilot.vim'
 
 call plug#end()
 
