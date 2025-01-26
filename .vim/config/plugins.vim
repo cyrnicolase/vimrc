@@ -15,6 +15,7 @@ Plug 'tpope/vim-surround'
 Plug 'cyrnicolase/auto-pairs'
 Plug 'chr4/nginx.vim'
 Plug 'cespare/vim-toml', {'branch': 'main'}
+Plug 'github/copilot.vim'
 
 call plug#end()
 
