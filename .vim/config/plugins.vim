@@ -17,6 +17,7 @@ Plug 'chr4/nginx.vim'
 Plug 'cespare/vim-toml', {'branch': 'main'}
 Plug 'godlygeek/tabular'
 Plug 'github/copilot.vim'
+Plug 'voldikss/vim-floaterm' " 悬浮终端
 
 call plug#end()
 
@@ -59,3 +60,10 @@ let g:go_auto_type_info = 1     " Status line types/signatures
 " vim-lsp
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_code_completion_enabled = 1
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-floaterm
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:floaterm_keymap_toggle = '<F12>'
+
