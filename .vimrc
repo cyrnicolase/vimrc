@@ -4,5 +4,4 @@
 source ~/.vim/config/basic.vim
 source ~/.vim/config/run_script.vim
 source ~/.vim/config/plugins.vim
-source ~/.vim/lsp/go.vim
-source ~/.vim/lsp/php.vim
+source ~/.vim/lsp/load.vim
