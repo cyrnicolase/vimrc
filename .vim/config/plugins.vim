@@ -18,6 +18,7 @@ Plug 'cespare/vim-toml', {'branch': 'main'}
 Plug 'godlygeek/tabular'
 Plug 'github/copilot.vim'
 Plug 'voldikss/vim-floaterm' " 悬浮终端
+Plug 'github/copilot.vim'
 
 call plug#end()
 
