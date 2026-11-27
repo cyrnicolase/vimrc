@@ -5,7 +5,6 @@ call plug#begin()
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'preservim/nerdtree'
 Plug 'morhetz/gruvbox'  " colorscheme
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'prabirshrestha/vim-lsp'
 Plug 'prabirshrestha/asyncomplete.vim'
 Plug 'prabirshrestha/asyncomplete-lsp.vim'
@@ -18,6 +17,8 @@ Plug 'cespare/vim-toml', {'branch': 'main'}
 Plug 'godlygeek/tabular'
 Plug 'github/copilot.vim'
 Plug 'voldikss/vim-floaterm' " 悬浮终端
+Plug 'junegunn/fzf'  " fzf binary already installed via Homebrew
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -66,4 +67,15 @@ let g:go_code_completion_enabled = 1
 " vim-floaterm
 """"""""""""""""""""""""""""""""""""""""""""""""""""
 let g:floaterm_keymap_toggle = '<F12>'
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fzf
+""""""""""""""""""""""""""""""""""""""""""""""""""""
+" preview.sh uses bat for syntax highlighting when available;
+" match the editor's gruvbox colorscheme
+let $BAT_THEME = 'gruvbox-dark'
+nnoremap <C-p> :Files<CR>
+nnoremap <leader>b :Buffers<CR>
+nnoremap <leader>g :Rg<CR>
 
