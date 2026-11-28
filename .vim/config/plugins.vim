@@ -52,9 +52,13 @@ let g:go_highlight_functions = 1
 let g:go_highlight_function_calls = 1
 let g:go_highlight_extra_types = 1
 let g:go_highlight_operators = 1
-let g:go_fmt_autosave = 1
+" 跳转/悬停等语义功能由 vim-lsp（gopls）接管（vim-go 内部 gopls 已关闭，见 lsp/go.vim）
+let g:go_def_mapping_enabled = 0    " vim-go 不再映射 gd/gD，gd 走 LspDefinition
+let g:go_auto_type_info = 0         " 悬停类型信息改用 LspHover（K）
+" 保存时格式化/整理 imports 由 vim-lsp 统一处理（lsp/go.vim 的 BufWritePre），
+" goimports 仅保留给手动 :GoFmt 使用
+let g:go_fmt_autosave = 0
 let g:go_fmt_command = 'goimports'
-let g:go_auto_type_info = 1     " Status line types/signatures
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""

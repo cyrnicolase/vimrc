@@ -35,6 +35,13 @@ if executable('gopls')
     augroup LspGoGopls
         au!
         au User lsp_setup call s:RegisterGopls()
+        " vim-go 的 gd/auto type info 已关闭，语义操作统一走 vim-lsp
+        autocmd FileType go nmap <buffer> gd <Plug>(lsp-definition)
+        autocmd FileType go nmap <buffer> <C-]> <Plug>(lsp-definition)
+        autocmd FileType go nmap <buffer> gy <Plug>(lsp-type-definition)
+        autocmd FileType go nmap <buffer> gi <Plug>(lsp-implementation)
+        autocmd FileType go nmap <buffer> gr <Plug>(lsp-references)
+        autocmd FileType go nmap <buffer> K <Plug>(lsp-hover)
         " 保存时自动整理 imports 并格式化（先整理后格式化，保证最终格式一致）
         autocmd BufWritePre *.go
             \ call execute(['LspCodeActionSync source.organizeImports', 'LspDocumentFormatSync'])
